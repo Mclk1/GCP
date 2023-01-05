@@ -1,0 +1,2 @@
+GCP ve AWS S3 Kullanılarak BigQuery'e veri transferi gerçekleştirilmiştir.
+Custumer.csv GCS'de, addres.csv S3'te kullanılmıştır.
