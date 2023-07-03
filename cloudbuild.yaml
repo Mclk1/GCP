@@ -7,6 +7,11 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/my-app']
 
+  # Cloud Run servisini dağıtma adımı
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'my-app', '--image', 'gcr.io/$PROJECT_ID/my-app', '--platform', 'managed', '--region', 'us-central1']
+
 images:
   # Oluşturulan imajın nerede kullanılacağı belirtilir
   - 'gcr.io/$PROJECT_ID/my-app'
+
